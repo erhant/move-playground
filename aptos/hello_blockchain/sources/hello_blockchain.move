@@ -5,12 +5,10 @@ module hello_blockchain::message {
   use aptos_framework::account;
   use aptos_framework::event;
 
-  //:!:>resource
   struct MessageHolder has key {
     message: string::String,
     message_change_events: event::EventHandle<MessageChangeEvent>,
   }
-  //<:!:resource
 
   struct MessageChangeEvent has drop, store {
     from_message: string::String,
@@ -42,16 +40,4 @@ module hello_blockchain::message {
       old_message_holder.message = message;
     }
   }
-
-  // #[test(account = @0x1)]
-  // public entry fun sender_can_set_message(account: signer) acquires MessageHolder {
-  //   let addr = signer::address_of(&account);
-  //   aptos_framework::account::create_account_for_test(addr);
-  //   set_message(account,  string::utf8(b"Hello, Blockchain"));
-
-  //   assert!(
-  //     get_message(addr) == string::utf8(b"Hello, Blockchain"),
-  //     ENO_MESSAGE
-  //   );
-  // }
 }

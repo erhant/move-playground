@@ -1,0 +1,10 @@
+[package]
+name = "CollatzLengths"
+version = "0.0.0"
+
+[addresses]
+owner = "360baeec5574c631eb1e661027b038679203bf5bd2999e3262a39e5ade26247b"
+std = "0x1"
+
+[dependencies]
+AptosFramework = { local = "../aptos-core/aptos-move/framework/aptos-framework" }
