@@ -11,6 +11,7 @@ aptos init
 aptos account fund-with-faucet --account default
 
 ### 3: Clone repo & go to example
+# i have cloned it but it is gitignored for this repo
 git clone https://github.com/aptos-labs/aptos-core
 cd ./aptos-core/aptos-move/move-examples/hello_blockchain
 

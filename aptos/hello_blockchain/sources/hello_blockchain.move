@@ -15,8 +15,8 @@ module hello_blockchain::message {
     to_message: string::String,
   }
 
-  /// There is no message present
-  const ENO_MESSAGE: u64 = 0;
+  
+  const ENO_MESSAGE: u64 = 0; // no message present
 
   public fun get_message(addr: address): string::String acquires MessageHolder {
     assert!(exists<MessageHolder>(addr), error::not_found(ENO_MESSAGE));
